@@ -1,0 +1,11 @@
+/Users/juliasong/Documents/OPA/Part 5 - OOP Advanced/Inlämningsuppgift/Uppgift1/The Village of Testing/The Village of Testing/bin/Debug/net6.0/The Village of Testing
+/Users/juliasong/Documents/OPA/Part 5 - OOP Advanced/Inlämningsuppgift/Uppgift1/The Village of Testing/The Village of Testing/bin/Debug/net6.0/The Village of Testing.dll
+/Users/juliasong/Documents/OPA/Part 5 - OOP Advanced/Inlämningsuppgift/Uppgift1/The Village of Testing/The Village of Testing/bin/Debug/net6.0/The Village of Testing.pdb
+/Users/juliasong/Documents/OPA/Part 5 - OOP Advanced/Inlämningsuppgift/Uppgift1/The Village of Testing/The Village of Testing/obj/Debug/net6.0/The Village of Testing.csproj.AssemblyReference.cache
+/Users/juliasong/Documents/OPA/Part 5 - OOP Advanced/Inlämningsuppgift/Uppgift1/The Village of Testing/The Village of Testing/obj/Debug/net6.0/The Village of Testing.GeneratedMSBuildEditorConfig.editorconfig
+/Users/juliasong/Documents/OPA/Part 5 - OOP Advanced/Inlämningsuppgift/Uppgift1/The Village of Testing/The Village of Testing/obj/Debug/net6.0/The Village of Testing.AssemblyInfoInputs.cache
+/Users/juliasong/Documents/OPA/Part 5 - OOP Advanced/Inlämningsuppgift/Uppgift1/The Village of Testing/The Village of Testing/obj/Debug/net6.0/The Village of Testing.AssemblyInfo.cs
+/Users/juliasong/Documents/OPA/Part 5 - OOP Advanced/Inlämningsuppgift/Uppgift1/The Village of Testing/The Village of Testing/obj/Debug/net6.0/The Village of Testing.csproj.CoreCompileInputs.cache
+/Users/juliasong/Documents/OPA/Part 5 - OOP Advanced/Inlämningsuppgift/Uppgift1/The Village of Testing/The Village of Testing/obj/Debug/net6.0/The Village of Testing.dll
+/Users/juliasong/Documents/OPA/Part 5 - OOP Advanced/Inlämningsuppgift/Uppgift1/The Village of Testing/The Village of Testing/obj/Debug/net6.0/refint/The Village of Testing.dll
+/Users/juliasong/Documents/OPA/Part 5 - OOP Advanced/Inlämningsuppgift/Uppgift1/The Village of Testing/The Village of Testing/obj/Debug/net6.0/The Village of Testing.pdb
