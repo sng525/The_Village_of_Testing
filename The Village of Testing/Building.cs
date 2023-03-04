@@ -8,5 +8,13 @@ public class Building
     public int daysHaveSpent = 0;
     public int woodCost;
     public int metalCost;
+
+    public Building(string name, int daysToComplete, int woodCost, int metalCost)
+    {
+        this.name = name;
+        this.daysToComplete = daysToComplete;
+        this.woodCost = woodCost;
+        this.metalCost = metalCost;
+    }
     
 }
