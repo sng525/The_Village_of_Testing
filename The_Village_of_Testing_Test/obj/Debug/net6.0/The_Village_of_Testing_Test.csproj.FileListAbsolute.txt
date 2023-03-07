@@ -1,0 +1,18 @@
+/Users/juliasong/Documents/OPA/Part 5 - OOP Advanced/Inlämningsuppgift/Uppgift1/The Village of Testing/The_Village_of_Testing_Test/bin/Debug/net6.0/CoverletSourceRootsMapping
+/Users/juliasong/Documents/OPA/Part 5 - OOP Advanced/Inlämningsuppgift/Uppgift1/The Village of Testing/The_Village_of_Testing_Test/bin/Debug/net6.0/The Village of Testing.deps.json
+/Users/juliasong/Documents/OPA/Part 5 - OOP Advanced/Inlämningsuppgift/Uppgift1/The Village of Testing/The_Village_of_Testing_Test/bin/Debug/net6.0/The Village of Testing.runtimeconfig.json
+/Users/juliasong/Documents/OPA/Part 5 - OOP Advanced/Inlämningsuppgift/Uppgift1/The Village of Testing/The_Village_of_Testing_Test/bin/Debug/net6.0/The Village of Testing
+/Users/juliasong/Documents/OPA/Part 5 - OOP Advanced/Inlämningsuppgift/Uppgift1/The Village of Testing/The_Village_of_Testing_Test/bin/Debug/net6.0/Microsoft.TestPlatform.PlatformAbstractions.dll
+/Users/juliasong/Documents/OPA/Part 5 - OOP Advanced/Inlämningsuppgift/Uppgift1/The Village of Testing/The_Village_of_Testing_Test/bin/Debug/net6.0/xunit.runner.visualstudio.dotnetcore.testadapter.dll
+/Users/juliasong/Documents/OPA/Part 5 - OOP Advanced/Inlämningsuppgift/Uppgift1/The Village of Testing/The_Village_of_Testing_Test/bin/Debug/net6.0/xunit.runner.reporters.netcoreapp10.dll
+/Users/juliasong/Documents/OPA/Part 5 - OOP Advanced/Inlämningsuppgift/Uppgift1/The Village of Testing/The_Village_of_Testing_Test/bin/Debug/net6.0/xunit.runner.utility.netcoreapp10.dll
+/Users/juliasong/Documents/OPA/Part 5 - OOP Advanced/Inlämningsuppgift/Uppgift1/The Village of Testing/The_Village_of_Testing_Test/bin/Debug/net6.0/The_Village_of_Testing_Test.dll
+/Users/juliasong/Documents/OPA/Part 5 - OOP Advanced/Inlämningsuppgift/Uppgift1/The Village of Testing/The_Village_of_Testing_Test/bin/Debug/net6.0/The_Village_of_Testing_Test.pdb
+/Users/juliasong/Documents/OPA/Part 5 - OOP Advanced/Inlämningsuppgift/Uppgift1/The Village of Testing/The_Village_of_Testing_Test/obj/Debug/net6.0/The_Village_of_Testing_Test.csproj.AssemblyReference.cache
+/Users/juliasong/Documents/OPA/Part 5 - OOP Advanced/Inlämningsuppgift/Uppgift1/The Village of Testing/The_Village_of_Testing_Test/obj/Debug/net6.0/The_Village_of_Testing_Test.GeneratedMSBuildEditorConfig.editorconfig
+/Users/juliasong/Documents/OPA/Part 5 - OOP Advanced/Inlämningsuppgift/Uppgift1/The Village of Testing/The_Village_of_Testing_Test/obj/Debug/net6.0/The_Village_of_Testing_Test.AssemblyInfoInputs.cache
+/Users/juliasong/Documents/OPA/Part 5 - OOP Advanced/Inlämningsuppgift/Uppgift1/The Village of Testing/The_Village_of_Testing_Test/obj/Debug/net6.0/The_Village_of_Testing_Test.AssemblyInfo.cs
+/Users/juliasong/Documents/OPA/Part 5 - OOP Advanced/Inlämningsuppgift/Uppgift1/The Village of Testing/The_Village_of_Testing_Test/obj/Debug/net6.0/The_Village_of_Testing_Test.csproj.CoreCompileInputs.cache
+/Users/juliasong/Documents/OPA/Part 5 - OOP Advanced/Inlämningsuppgift/Uppgift1/The Village of Testing/The_Village_of_Testing_Test/obj/Debug/net6.0/The_Village_of_Testing_Test.dll
+/Users/juliasong/Documents/OPA/Part 5 - OOP Advanced/Inlämningsuppgift/Uppgift1/The Village of Testing/The_Village_of_Testing_Test/obj/Debug/net6.0/refint/The_Village_of_Testing_Test.dll
+/Users/juliasong/Documents/OPA/Part 5 - OOP Advanced/Inlämningsuppgift/Uppgift1/The Village of Testing/The_Village_of_Testing_Test/obj/Debug/net6.0/The_Village_of_Testing_Test.pdb

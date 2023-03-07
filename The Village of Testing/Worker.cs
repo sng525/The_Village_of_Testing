@@ -1,4 +1,4 @@
-using TheVillageofTesting;
+using System.ComponentModel;
 
 namespace The_Village_of_Testing;
 
@@ -12,14 +12,13 @@ public class Worker
     Village village;
 
     // TODO en delegate/functional interface som innehåller vad som händer när de arbetar.
-
     public Worker(string name, string occupation)
     {
         this.name = name;
         this.occupation = occupation;
     }
     
-    public bool DoWork(Worker worker)
+    public void DoWork(Worker worker)
     {
         // TODO kallar på en delegate/functional interface som finns skapad som ett objekt i Worker.
 
@@ -27,9 +26,9 @@ public class Worker
         // TODO om alive är false så går det varken att mata arbetaren eller få denna att arbeta.
         if (hungry || alive == false)
         {
-            return false;
+            return;
         }
-        
+
         switch (worker.occupation)
         {
             // TODO Denna skall kalla en av fyra funktioner i Village.
@@ -47,17 +46,13 @@ public class Worker
                 break;
         }
         
-        return true;
     }
+
 
     public bool FeedWorker()
     {
-        // TODO varje Worker subtraheras 1 mat från byns resurser
         var food = village.GetFood();
-
-        // TODO inte har tillräcklig mat, sätt ”hungry” till true i Worker på de som inte fick mat
-        // TODO Om de blir hungriga så ökas daysHungry med 1.
-        // TODO om daysHungry når 40 eller högre, sätt alive till false. 
+        
         if (food <= 0)
         {
             hungry = true;
@@ -65,15 +60,15 @@ public class Worker
             if (daysHungry >= 40)
             {
                 alive = false;
-                return false;
             }
+            return false;
         }
 
-        // TODO Om de någonsin får mat, sätt daysHungry till 0 och hungry till false.
         hungry = false;
         daysHungry = 0;
 
-        village.SetFood(food - 1);
+        food -= 1;
+        village.SetFood(food);
         return true;
     }
 }
