@@ -1,217 +1,209 @@
+using System.Threading.Channels;
+using static The_Village_of_Testing.Building;
+
 namespace The_Village_of_Testing;
 
 public class Village
 {
-    private int food;
-    private int wood;
-    private int metal;
-    private List<Building> buildings;
-    private List<Building> unfinishedBuildings;
-    private List<Worker> workers;
-    public int foodPerDay = 5;
-    public int woodPerDay = 1;
-    public int metalPerDay = 1;
-    public int daysGone;
+    private int _food;
+    private int _wood;
+    private int _metal;
+    private List<Building> _buildings;
+    private List<Building> _unfinishedBuildings;
+    private List<Worker> _workers;
+    public int FoodPerDay = 5;
+    public int WoodPerDay = 1;
+    public int MetalPerDay = 1;
+    private int _daysGone;
+    private Building currentBuilding;
 
     public Village()
     {
-        food = 10;
-        wood = 0;
-        metal = 0;
-        buildings = new List<Building>();
-        unfinishedBuildings = new List<Building>(1000);
-        workers = new List<Worker>();
-        daysGone = 0;
-        buildings.Add(new Building("house", 3, 5, 0));
-        buildings.Add(new Building("house", 3, 5, 0));
-        buildings.Add(new Building("house", 3, 5, 0));
+        _food = 10;
+        _wood = 0;
+        _metal = 0;
+        _buildings = new List<Building>();
+        _unfinishedBuildings = new List<Building>();
+        _workers = new List<Worker>();
+        _daysGone = 0;
+        Building hosue1 = new Building("house", 3, 5, 0);
+        _buildings.Add(hosue1);
+        _buildings.Add(new Building("house", 3, 5, 0));
+        _buildings.Add(new Building("house", 3, 5, 0));
     }
 
     public int GetFood()
     {
-        return food;
+        return _food;
     }
-
     public int SetFood(int food)
     {
-        this.food = food;
-        return food;
+        _food = food;
+        return _food;
     }
-
     public int GetWood()
     {
-        return wood;
+        return _wood;
     }
-
-    public int SetWood(int wood)
+    public void SetWood(int wood)
     {
-        this.wood = wood;
-        return wood;
+        _wood = wood;
     }
-
     public int GetMetal()
     {
-        return metal;
+        return _metal;
     }
-
-    public int SetMetal(int metal)
+    public void SetMetal(int metal)
     {
-        this.metal = metal;
-        return metal;
+        _metal = metal;
     }
-
     public List<Building> GetBuildings()
     {
-        return buildings;
+        return _buildings;
     }
-
     public List<Building> GetUnfinishedBuildings()
     {
-        return unfinishedBuildings;
+        return _unfinishedBuildings;
     }
-
     public List<Worker> GetWorkers()
     {
-        return workers;
+        return _workers;
     }
-
+    public void SetWorkers(Worker worker)
+    {
+        _workers.Add(worker);
+    }
     public int GetDaysGone()
     {
-        return daysGone;
+        return _daysGone;
     }
 
     public void AddFood()
     {
-        food += foodPerDay;
+        _food += FoodPerDay;
     }
 
     public void AddWood()
     {
-        wood += woodPerDay;
+        _wood += WoodPerDay;
     }
 
     public void AddMetal()
     {
-        metal += metalPerDay;
+        _metal += MetalPerDay;
     }
 
     public void Build()
     {
         // TODO gå in i listan av projekt, ta den första, och lägga till 1 till antalet arbetsdagar spenderade på byggnaden.
-        Building currentBuilding = unfinishedBuildings[0];
-        switch (currentBuilding.name)
-        {
-            case "house":
-                currentBuilding.daysToComplete = 3;
-                currentBuilding.daysHaveSpent += 1;
-                break;
-            case "woodmill":
-                currentBuilding.daysToComplete = 5;
-                currentBuilding.daysHaveSpent += 1;
-                break;
-            case "quarry":
-                currentBuilding.daysToComplete = 7;
-                currentBuilding.daysHaveSpent += 1;
-                break;
-            case "farm":
-                currentBuilding.daysToComplete = 5;
-                currentBuilding.daysHaveSpent += 1;
-                break;
-            case "castle":
-                currentBuilding.daysToComplete = 50;
-                currentBuilding.daysHaveSpent += 1;
-                Console.WriteLine("The castle is complete! You won! You took " + daysGone + " days");
-                break;
-        }
+        currentBuilding = _unfinishedBuildings[0];
+        currentBuilding.daysHaveSpent++;
 
         if (currentBuilding.daysHaveSpent >= currentBuilding.daysToComplete)
         {
             currentBuilding.complete = true;
-            unfinishedBuildings.Remove(currentBuilding);
-            buildings.Add(currentBuilding);
-            Console.WriteLine(currentBuilding.name + "has been completed.");
+            _unfinishedBuildings.Remove(currentBuilding);
+            _buildings.Add(currentBuilding);
+            Console.WriteLine($"{currentBuilding.name} has been completed.");
+            
             switch (currentBuilding.name)
             {
                 case "woodmill":
-                    woodPerDay += 2;
+                    WoodPerDay += 2;
                     break;
                 case "quarry":
-                    metalPerDay += 2;
+                    MetalPerDay += 2;
                     break;
                 case "farm":
-                    foodPerDay += 10;
+                    FoodPerDay += 10;
+                    break;
+                case "castle":
+                    Console.WriteLine("The castle is complete! You won! You took " + _daysGone + " days");
                     break;
             }
         }
     }
 
-    public bool Day()
+    public void Day()
     {
-        daysGone++;
+        _daysGone++;
 
-        if (workers.Count == 0)
+        if (_workers.Count == 0)
         {
-            Console.WriteLine("There is no available worker.");
-            return false;
+            Console.WriteLine("There is no available worker."); 
         }
 
-        foreach (Worker worker in workers)
+        FeedWorkers();
+        
+        foreach (Worker worker in _workers)
         {
-            worker.FeedWorker();
-            worker.DoWork(worker);
+            worker.DoWork(this);
         }
-
-        return true;
+    }
+    
+    public void FeedWorkers()
+    {
+        foreach (var worker in _workers)
+        {
+            if (worker.daysHungry >= 40)
+            {
+                worker.alive = false;
+                Console.WriteLine($"{worker.name} is not alive. It's not available to feed.");
+            }
+            if (_food <= 0)
+            {
+                worker.hungry = true;
+                worker.daysHungry++;
+            }
+            else
+            {
+                _food--;
+                worker.hungry = false;
+                worker.daysHungry = 0;
+            }
+        }
+        
     }
 
     public void BuryDead()
     {
-        // TODO tar bort alla Workers som har ”alive = false” ur listan Workers
-        foreach (var worker in workers)
+        foreach (var worker in _workers)
         {
             if (worker.alive == false)
             {
-                workers.Remove(worker);
+                _workers.Remove(worker);
             }
         }
     }
 
-    public bool AddBuilding(Building building)
+    public void AddProject(Building building)
     {
-        if (food > 0 && wood >= building.woodCost && metal >= building.metalCost)
+        if (_food > 0 && _wood >= building.woodCost && _metal >= building.metalCost)
         {
-            unfinishedBuildings.Add(building);
-            wood -= building.woodCost;
-            metal -= building.metalCost;
+            _unfinishedBuildings.Add(building);
+            _wood -= building.woodCost;
+            _metal -= building.metalCost;
             Console.WriteLine(building.name + " has been added.");
-            return true;
         }
-
-        Console.WriteLine("There are not enough sources.");
-        return false;
+        else
+        {
+            Console.WriteLine("There are not enough sources.");
+        }
     }
 
-    public bool AddWorker(Worker worker)
+    public void AddWorker(Worker worker)
     {
-        // TODO lägga till en ny arbetare, men bara om det finns tillräckligt med hus för dem.
-        var houseNum = buildings.Count(building => building.name == "house");
-        var workerNum = workers.Count();
+        var houseNum = _buildings.Count(building => building.name == "house");
+        var workerNum = _workers.Count;
 
-        if (workerNum == 0)
-        {
-            workers.Add(worker);
-            Console.WriteLine(worker.name + " has been added.");
-            return true;
-        }
-
-        if (workerNum % houseNum == 0)
+        if (workerNum / houseNum >= 2)
         {
             Console.WriteLine("There is not enough house.");
-            return false;
         }
-
-        workers.Add(worker);
-        Console.WriteLine(worker.name + "has been added.");
-        return true;
+        else
+        {
+            _workers.Add(worker);
+            Console.WriteLine(worker.name + " has been added.");
+        }
     }
 }

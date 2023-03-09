@@ -4,31 +4,51 @@
     {
         static void Main(string[] args)
         {
-            Village village = new Village();
+            var gameIsOn = true;
+            Console.WriteLine("Welcome to the village building game!");
+            Console.WriteLine("Note: there are 3 houses in the village and you add at most six workers before you build more houses.");
             
-            Console.WriteLine("What building do you want to build? ");
-            var building = Console.ReadLine();
-            
-            switch (building)
+            while (gameIsOn)
             {
-                case "house":
-                    var house = new Building("house", 3, 0, 0);
-                    village.AddBuilding(house);
-                    break;
-            }
+                Village village = new Village();
+                Console.WriteLine("What do you want to do now?");
+                Console.WriteLine("1. Add a new worker ");
+                Console.WriteLine("2. Add a new project ");
+                Console.WriteLine("3.  ");
+                
+                var task = Console.ReadLine();
 
-            Worker adam = new Worker("Adam", "builder");
-            village.AddWorker(adam);
+                switch (task)
+                {
+                    case "1":
+                        Console.WriteLine("What's the worker's name?");
+                        var workerName = Console.ReadLine();
+                        Console.WriteLine("What's do you want this worker to do? wood");
+                        break;
+                }
+
+                switch (task)
+                {
+                    case "house":
+                        var house = new Building("house", 3, 0, 0);
+                        village.AddProject(house);
+                        break;
+                }
+
+                Worker adam = new Worker("Adam", "builder");
+                village.AddWorker(adam);
             
-            village.Day();
-            var leftFood = village.GetFood();
-            Console.WriteLine(leftFood);
+                village.Day();
+                var leftFood = village.GetFood();
+                Console.WriteLine(leftFood);
 
 
-            if (village.GetWorkers().Count == 0)
-            {
-                Console.WriteLine("Game Over.");
+                if (village.GetWorkers().Count == 0)
+                {
+                    Console.WriteLine("Game Over.");
+                }
             }
+ 
         }
     }
 }

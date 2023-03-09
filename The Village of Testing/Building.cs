@@ -5,7 +5,7 @@ public class Building
     public string name;
     public bool complete;
     public int daysToComplete;
-    public int daysHaveSpent = 0;
+    public int daysHaveSpent;
     public int woodCost;
     public int metalCost;
 
@@ -15,6 +15,7 @@ public class Building
         this.daysToComplete = daysToComplete;
         this.woodCost = woodCost;
         this.metalCost = metalCost;
+        complete = false;
+        daysHaveSpent = 0;
     }
-    
 }

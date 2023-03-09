@@ -1,52 +1,69 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=10006b5d_002Ddb05_002D46e4_002D985a_002D841ad4f945ec/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="RunDayWithoutEnoughtFood" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=03151601_002D0fd1_002D432d_002D9e8c_002D2558b9923a71/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="AddOneProject_WithEnoughResources" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;TestAncestor&gt;
-    &lt;TestId&gt;xUnit::4B8158F8-B68B-498A-AF06-FCAA6DF335C8::net6.0::The_Village_of_Testing_Test.VillageTest.RunDayWithoutEnoughtFood&lt;/TestId&gt;
-    &lt;TestId&gt;xUnit::4B8158F8-B68B-498A-AF06-FCAA6DF335C8::net6.0::The_Village_of_Testing_Test.VillageTest.AddOneProject_CheckResoucers&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::4B8158F8-B68B-498A-AF06-FCAA6DF335C8::net6.0::The_Village_of_Testing_Test.AddProjectTest.AddOneProject_WithEnoughResources&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::4B8158F8-B68B-498A-AF06-FCAA6DF335C8::net6.0::The_Village_of_Testing_Test.AddProjectTest.AddOneProject_WithoutEnoughResources&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::4B8158F8-B68B-498A-AF06-FCAA6DF335C8::net6.0::The_Village_of_Testing_Test.AddWorkerTest&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::4B8158F8-B68B-498A-AF06-FCAA6DF335C8::net6.0::The_Village_of_Testing_Test.VillageTest&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::4B8158F8-B68B-498A-AF06-FCAA6DF335C8::net6.0::The_Village_of_Testing_Test.BuildingFinishedTest&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=36435135_002D3a4a_002D4a04_002D89c6_002Dd48636877898/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="HungryWorker_DontWork #3" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;Or&gt;
+    &lt;TestAncestor&gt;
+      &lt;TestId&gt;xUnit::4B8158F8-B68B-498A-AF06-FCAA6DF335C8::net6.0::The_Village_of_Testing_Test.WorkerTest&lt;/TestId&gt;
+      &lt;TestId&gt;xUnit::4B8158F8-B68B-498A-AF06-FCAA6DF335C8::net6.0::The_Village_of_Testing_Test.AddProjectTest&lt;/TestId&gt;
+      &lt;TestId&gt;xUnit::4B8158F8-B68B-498A-AF06-FCAA6DF335C8::net6.0::The_Village_of_Testing_Test.WorkerHungryTest.BuryDead_RemoveNotAliveWorkers&lt;/TestId&gt;
+    &lt;/TestAncestor&gt;
+    &lt;ProjectFile&gt;4B8158F8-B68B-498A-AF06-FCAA6DF335C8/f:BuildingFinishedTest.cs&lt;/ProjectFile&gt;
+    &lt;ProjectFile&gt;4B8158F8-B68B-498A-AF06-FCAA6DF335C8/f:AddWorkerTest.cs&lt;/ProjectFile&gt;
+    &lt;ProjectFile&gt;4B8158F8-B68B-498A-AF06-FCAA6DF335C8/f:DayTest.cs&lt;/ProjectFile&gt;
+  &lt;/Or&gt;
+&lt;/SessionState&gt;</s:String>
+	
+	
+	
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=4abac926_002De6ae_002D4343_002Dbbd1_002Da8560386e480/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="HungryMoreThanFortyDays" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::4B8158F8-B68B-498A-AF06-FCAA6DF335C8::net6.0::The_Village_of_Testing_Test.WorkerTest.HungryMoreThanFortyDays&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=61f3c087_002Dade8_002D428e_002Dae1d_002D5e5bb48d66a3/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="RunDay_WithoutEnoughFood" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::4B8158F8-B68B-498A-AF06-FCAA6DF335C8::net6.0::The_Village_of_Testing_Test.VillageTest&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String>
 	
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=419d1f04_002Dfd0b_002D4d7a_002D81d3_002D5519d4a699d1/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="AddWorkers_ThenTryDayWithEnoughFood" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=8438fbba_002D532b_002D4c76_002D9ac3_002De57e1b35c79b/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="NoWorker_ThenTryDay_ShouldReturnFalse" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;TestAncestor&gt;
-    &lt;TestId&gt;xUnit::4B8158F8-B68B-498A-AF06-FCAA6DF335C8::net6.0::The_Village_of_Testing_Test.VillageTest.AddWorkers_ThenTryDayWithEnoughFood&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::4B8158F8-B68B-498A-AF06-FCAA6DF335C8::net6.0::The_Village_of_Testing_Test.VillageTest.NoWorker_ThenTryDayFunction&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=73e4dfac_002Dbb93_002D41a3_002Dbd69_002D3fe71a9f4172/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="BuildAHouse #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=881464f6_002Dda52_002D496e_002D9a52_002Dd676559a3bb6/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="VillageTest" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;TestAncestor&gt;
     &lt;TestId&gt;xUnit::4B8158F8-B68B-498A-AF06-FCAA6DF335C8::net6.0::The_Village_of_Testing_Test.VillageTest&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=913660d9_002Dc060_002D4be0_002Db554_002D6c8ed0f4ce07/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="AddOneProject_WithEnoughResouces" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=8eb1365f_002D2808_002D4cb0_002D8da8_002D30dee80f37f5/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="AddTwoWorkers_TryDayWithEnoughFood" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;TestAncestor&gt;
-    &lt;TestId&gt;xUnit::4B8158F8-B68B-498A-AF06-FCAA6DF335C8::net6.0::The_Village_of_Testing_Test.VillageTest.AddOneProject_WithEnoughResouces&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::4B8158F8-B68B-498A-AF06-FCAA6DF335C8::net6.0::The_Village_of_Testing_Test.VillageTest.AddTwoWorkers_TryDayFunctionWithEnoughFood&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=a103a679_002Dd990_002D4246_002D9adf_002D812e8116f7ab/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from Solution" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
-  &lt;Solution /&gt;
-&lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=aa7166c9_002D487a_002D4422_002D8463_002D4d1931e82156/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="DayBeforeAndAfterWoodMillIsReady_CollectExtraWood" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=943cfffc_002D79c1_002D42d2_002D966a_002D2e5ef576edcd/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="HungryWorker_DontWork" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;TestAncestor&gt;
-    &lt;TestId&gt;xUnit::4B8158F8-B68B-498A-AF06-FCAA6DF335C8::net6.0::The_Village_of_Testing_Test.VillageTest.DayBeforeAndAfterWoodMillIsReady_CollectExtraWood&lt;/TestId&gt;
-    &lt;TestId&gt;xUnit::4B8158F8-B68B-498A-AF06-FCAA6DF335C8::net6.0::The_Village_of_Testing_Test.VillageTest.RunDay_WithoutEnoughtFood&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::4B8158F8-B68B-498A-AF06-FCAA6DF335C8::net6.0::The_Village_of_Testing_Test.WorkerTest.HungryWorker_DontWork&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=b968c8d9_002D9ab4_002D4be5_002D95a8_002D8bc46381163b/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="NoWorker_ThenTryDay" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+	
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=c124c22e_002Dc546_002D44dd_002D8bd6_002D2b734e0fb256/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="HungryWorker_DontWork #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;TestAncestor&gt;
-    &lt;TestId&gt;xUnit::4B8158F8-B68B-498A-AF06-FCAA6DF335C8::net6.0::The_Village_of_Testing_Test.VillageTest.NoWorker_ThenTryDay&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::4B8158F8-B68B-498A-AF06-FCAA6DF335C8::net6.0::The_Village_of_Testing_Test.WorkerTest&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=c9538db3_002D7431_002D4a23_002D80b7_002D3101a968d835/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="AddOneProject_WithoutEnoughResources" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+	
+	
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=ff3d2796_002D51c3_002D4964_002D832a_002Ddd4b40325dbc/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="AddWorker_ThenCallDayFunction" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;TestAncestor&gt;
-    &lt;TestId&gt;xUnit::4B8158F8-B68B-498A-AF06-FCAA6DF335C8::net6.0::The_Village_of_Testing_Test.VillageTest.AddOneProject_WithoutEnoughResources&lt;/TestId&gt;
-  &lt;/TestAncestor&gt;
-&lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=c9a0d2c6_002D36a9_002D4cd2_002Db931_002D69cd1543e601/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="BuildAHouse" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
-  &lt;TestAncestor&gt;
-    &lt;TestId&gt;xUnit::4B8158F8-B68B-498A-AF06-FCAA6DF335C8::net6.0::The_Village_of_Testing_Test.VillageTest&lt;/TestId&gt;
-  &lt;/TestAncestor&gt;
-&lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=ede2c488_002Dc47d_002D4889_002Da808_002Def7ae3d1f9be/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="AddOneProject_CheckResoucers" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
-  &lt;TestAncestor&gt;
-    &lt;TestId&gt;xUnit::4B8158F8-B68B-498A-AF06-FCAA6DF335C8::net6.0::The_Village_of_Testing_Test.VillageTest.AddOneProject_CheckResoucers&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::4B8158F8-B68B-498A-AF06-FCAA6DF335C8::net6.0::The_Village_of_Testing_Test.VillageTest.AddWorker_ThenCallDayFunction&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
