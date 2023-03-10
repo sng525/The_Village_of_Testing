@@ -11,7 +11,7 @@ public class AddProjectTest
         var village = new Village();
         village.SetWood(5);
         village.SetMetal(1);
-        
+
         // When
         var woodmill = new Building("woodmill", 5, 5, 1);
         village.AddProject(woodmill);
@@ -20,10 +20,10 @@ public class AddProjectTest
 
         // then
         Assert.Single(village.GetUnfinishedBuildings());
-        Assert.Equal(0, currentWoodAmount); // test if resources are deducted correctly
-        Assert.Equal(0, currentMetalAmount); 
+        Assert.Equal(0, currentWoodAmount); // 5 resources should be deducted
+        Assert.Equal(0, currentMetalAmount);
     }
-    
+
     [Fact]
     public void AddOneProject_WithoutEnoughResources()
     {
@@ -33,7 +33,7 @@ public class AddProjectTest
         // When
         var woodmill = new Building("woodmill", 5, 5, 1);
         village.AddProject(woodmill);
-        
+
         // Then
         Assert.Empty(village.GetUnfinishedBuildings());
     }

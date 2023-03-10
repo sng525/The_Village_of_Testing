@@ -36,43 +36,52 @@ public class Village
     {
         return _food;
     }
-    public int SetFood(int food)
+
+    public void SetFood(int food)
     {
         _food = food;
-        return _food;
     }
+
     public int GetWood()
     {
         return _wood;
     }
+
     public void SetWood(int wood)
     {
         _wood = wood;
     }
+
     public int GetMetal()
     {
         return _metal;
     }
+
     public void SetMetal(int metal)
     {
         _metal = metal;
     }
+
     public List<Building> GetBuildings()
     {
         return _buildings;
     }
+
     public List<Building> GetUnfinishedBuildings()
     {
         return _unfinishedBuildings;
     }
+
     public List<Worker> GetWorkers()
     {
         return _workers;
     }
+
     public void SetWorkers(Worker worker)
     {
         _workers.Add(worker);
     }
+
     public int GetDaysGone()
     {
         return _daysGone;
@@ -95,7 +104,6 @@ public class Village
 
     public void Build()
     {
-        // TODO gå in i listan av projekt, ta den första, och lägga till 1 till antalet arbetsdagar spenderade på byggnaden.
         currentBuilding = _unfinishedBuildings[0];
         currentBuilding.daysHaveSpent++;
 
@@ -105,7 +113,7 @@ public class Village
             _unfinishedBuildings.Remove(currentBuilding);
             _buildings.Add(currentBuilding);
             Console.WriteLine($"{currentBuilding.name} has been completed.");
-            
+
             switch (currentBuilding.name)
             {
                 case "woodmill":
@@ -130,17 +138,17 @@ public class Village
 
         if (_workers.Count == 0)
         {
-            Console.WriteLine("There is no available worker."); 
+            Console.WriteLine("There is no available worker.");
         }
 
         FeedWorkers();
-        
+
         foreach (Worker worker in _workers)
         {
             worker.DoWork(this);
         }
     }
-    
+
     public void FeedWorkers()
     {
         foreach (var worker in _workers)
@@ -150,7 +158,7 @@ public class Village
                 worker.alive = false;
                 Console.WriteLine($"{worker.name} is not alive. It's not available to feed.");
             }
-            if (_food <= 0)
+            else if (_food <= 0)
             {
                 worker.hungry = true;
                 worker.daysHungry++;
@@ -162,16 +170,15 @@ public class Village
                 worker.daysHungry = 0;
             }
         }
-        
     }
 
     public void BuryDead()
     {
-        foreach (var worker in _workers)
+        for (int i = 0; i < _workers.Count; i++)
         {
-            if (worker.alive == false)
+            if (_workers[i].alive == false)
             {
-                _workers.Remove(worker);
+                _workers.Remove(_workers[i]);
             }
         }
     }
@@ -205,5 +212,15 @@ public class Village
             _workers.Add(worker);
             Console.WriteLine(worker.name + " has been added.");
         }
+    }
+
+    public void SaveProgress()
+    {
+        
+    }
+
+    public void LoadProgress()
+    {
+        
     }
 }

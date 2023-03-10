@@ -15,28 +15,28 @@ public class AddWorkerTest
         // When
         village.AddWorker(adam);
         var actual = village.GetWorkers().Count;
-        
+
         // Then
         Assert.Equal(1, actual);
     }
-    
+
     [Fact]
     public void AddTwoWorkers_TheNumberOfWorkersShouldBeTwo()
     {
         // Given
         var village = new Village();
-        var adam = new Worker("Adam", "woodmill");
+        var adam = new Worker("Adam", "woodcutter");
         var alex = new Worker("Alex", "farmer");
 
         // When
         village.AddWorker(adam);
         village.AddWorker(alex);
         var actual = village.GetWorkers().Count;
-        
+
         // Then
         Assert.Equal(2, actual);
     }
-    
+
     [Fact]
     public void AddThreeWorkers_TheNumberOfWorkersShouldBeThree()
     {
@@ -51,11 +51,11 @@ public class AddWorkerTest
         village.AddWorker(alex);
         village.AddWorker(bob);
         int actual = village.GetWorkers().Count;
-        
+
         // Then
         Assert.Equal(3, actual);
     }
-    
+
     [Fact]
     public void AddSevenWorkers_WithThreeHouses_NumberOfWorkersShouldBeSix()
     {
@@ -68,7 +68,7 @@ public class AddWorkerTest
         var mary = new Worker("Mary", "woodcutter");
         var david = new Worker("David", "farmer");
         var eva = new Worker("Eva", "miner");
-        
+
 
         // When
         village.AddWorker(adam);
@@ -79,11 +79,11 @@ public class AddWorkerTest
         village.AddWorker(david);
         village.AddWorker(eva);
         var actual = village.GetWorkers().Count;
-        
+
         // Then
-        Assert.Equal(6, actual); // when adding the seventh worker, there is no enough house,
+        Assert.Equal(6, actual); // when adding the seventh worker, there is no enough house
     }
-    
+
     [Fact]
     public void AddWorker_ThenCallDayFunction()
     {
@@ -91,12 +91,12 @@ public class AddWorkerTest
         var village = new Village();
         var adam = new Worker("Adam", "woodcutter");
         village.AddWorker(adam);
-        
+
         // When
         village.Day();
         var actual = village.GetFood();
         var numOfWorkers = village.GetWorkers().Count;
-        
+
         // Then
         Assert.Equal(9, actual);
         Assert.Equal(1, numOfWorkers);

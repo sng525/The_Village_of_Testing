@@ -10,8 +10,8 @@ public class Worker
     public int daysHungry;
     public bool alive;
 
-    // TODO en delegate/functional interface som innehåller vad som händer när de arbetar.
     public delegate void DoWorkHandler(Village village);
+
     DoWorkHandler doWorkHandler;
 
     public Worker(string name, string occupation)
@@ -21,7 +21,7 @@ public class Worker
         hungry = false;
         daysHungry = 0;
         alive = true;
-        switch (occupation)
+        switch (this.occupation)
         {
             case "woodcutter":
                 doWorkHandler = village => village.AddWood();
@@ -47,5 +47,4 @@ public class Worker
             doWorkHandler(village);
         }
     }
-    
 }

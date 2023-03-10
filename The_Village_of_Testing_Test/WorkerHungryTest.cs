@@ -15,11 +15,11 @@ public class WorkerHungryTest
         // When
         village.SetFood(0); // there is no enough food
         village.Day();
-        
+
         // Then
         Assert.True(adam.hungry);
     }
-    
+
     [Fact]
     public void HungryFortyDays_ShouldBeNotAlive()
     {
@@ -29,15 +29,14 @@ public class WorkerHungryTest
 
         var village = new Village();
         village.AddWorker(adam);
-        
+
         // When
         village.Day();
-        
+
         // Then 
         Assert.False(adam.alive);
     }
-    
-    // 3 Det skall inte gå att mata en arbetare med ”alive = false”.
+
     [Fact]
     public void CantFeedNotAliveWorker()
     {
@@ -47,16 +46,15 @@ public class WorkerHungryTest
 
         var village = new Village();
         village.AddWorker(adam);
-        
+
         // When
         village.Day();
-        var actual = village.GetFood(); // There is 10 initialized food
-        
+        var actual = village.GetFood();
+
         // Then 
-        Assert.Equal(10, actual);
+        Assert.Equal(10, actual); // There is 10 initialized food and food is not used
     }
-    
-    // 4 Kolla att ”BuryDead()” funktionen tar bort de som har ”alive = false”.
+
     [Fact]
     public void BuryDead_RemoveNotAliveWorkers()
     {
@@ -64,17 +62,17 @@ public class WorkerHungryTest
         var village = new Village();
         var adam = new Worker("Adam", "woodcutter");
         var bob = new Worker("Bob", "farmer");
-        var cindy = new Worker("Cindy", "builder");
         village.AddWorker(adam);
         village.AddWorker(bob);
-        village.AddWorker(cindy);
-        
+
         // When
         adam.daysHungry = 40;
+        village.Day();
         village.BuryDead();
         var actual = village.GetWorkers().Count;
-        
+
         // Then
-        Assert.Equal(2, actual);
+        Assert.False(adam.alive);
+        Assert.Equal(1, actual);
     }
 }
