@@ -15,7 +15,22 @@ public class Village
     public int WoodPerDay = 1;
     public int MetalPerDay = 1;
     private int _daysGone;
-    private Building currentBuilding;
+
+    DatabaseConnection dbConnection;
+    RandomClass random = new RandomClass();
+
+    public Village(DatabaseConnection dbConnection, RandomClass random)
+    {
+        _food = 10;
+        _wood = 0;
+        _metal = 0;
+        _buildings = new List<Building>();
+        _unfinishedBuildings = new List<Building>();
+        _workers = new List<Worker>();
+        _daysGone = 0;
+        this.dbConnection = dbConnection;
+        this.random = random;
+    }
 
     public Village()
     {
@@ -26,10 +41,11 @@ public class Village
         _unfinishedBuildings = new List<Building>();
         _workers = new List<Worker>();
         _daysGone = 0;
-        Building hosue1 = new Building("house", 3, 5, 0);
-        _buildings.Add(hosue1);
         _buildings.Add(new Building("house", 3, 5, 0));
         _buildings.Add(new Building("house", 3, 5, 0));
+        _buildings.Add(new Building("house", 3, 5, 0));
+        dbConnection = new DatabaseConnection();
+        random = new RandomClass();
     }
 
     public int GetFood()
@@ -66,15 +82,30 @@ public class Village
     {
         return _buildings;
     }
+    
+    public void SetBuildings(List<Building> buildings)
+    {
+        _buildings = buildings;
+    }
 
     public List<Building> GetUnfinishedBuildings()
     {
         return _unfinishedBuildings;
     }
+    
+    public void SetUnfinishedBuildings(List<Building> unfinishedBuildings)
+    {
+        _unfinishedBuildings = unfinishedBuildings;
+    }
 
     public List<Worker> GetWorkers()
     {
         return _workers;
+    }
+    
+    public void SetWorkers(List<Worker> workers)
+    {
+        _workers = workers;
     }
 
     public void SetWorkers(Worker worker)
@@ -85,6 +116,11 @@ public class Village
     public int GetDaysGone()
     {
         return _daysGone;
+    }
+    
+    public void SetDaysGone(int daysGone)
+    {
+        _daysGone = daysGone;
     }
 
     public void AddFood()
@@ -104,7 +140,7 @@ public class Village
 
     public void Build()
     {
-        currentBuilding = _unfinishedBuildings[0];
+        var currentBuilding = _unfinishedBuildings[0];
         currentBuilding.daysHaveSpent++;
 
         if (currentBuilding.daysHaveSpent >= currentBuilding.daysToComplete)
@@ -216,11 +252,24 @@ public class Village
 
     public void SaveProgress()
     {
-        
+        dbConnection.Save(_food, _wood, _metal,  _daysGone, _buildings, _unfinishedBuildings, _workers);
     }
 
     public void LoadProgress()
     {
-        
+        dbConnection.Load();
+        SetFood(dbConnection.GetFood());
+        SetMetal(dbConnection.GetMetal());
+        SetWood(dbConnection.GetWood());
+        SetBuildings(dbConnection.GetBuildings());
+        SetUnfinishedBuildings(dbConnection.GetUnifinishedBuildings());
+        SetWorkers(dbConnection.GetWorkers());
+        SetDaysGone(dbConnection.GetDaysGone());
+    }
+
+        public void AddRandomWorker(int nameLength)
+    {
+        var worker = random.ReturnRandomWorker(nameLength);
+        _workers.Add(worker);
     }
 }

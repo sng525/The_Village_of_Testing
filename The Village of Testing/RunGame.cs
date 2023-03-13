@@ -34,6 +34,11 @@ public class RunGame
                     break;
                 case "3":
                     Bury();
+                    if (village.GetWorkers().Count == 0)
+                    {
+                        running = false;
+                        Console.WriteLine("Game Over.");
+                    }
                     break;
                 case "4":
                     CheckResources();
@@ -49,16 +54,11 @@ public class RunGame
                     break;
                 case "quit":
                     running = false;
+                    Console.WriteLine("Game Over.");
                     break;
                 default:
                     Console.WriteLine("Not applicable option.");
                     break;
-            }
-
-            if (village.GetWorkers().Count == 0)
-            {
-                Console.WriteLine("Game Over.");
-                running = false;
             }
         }
     }
@@ -66,27 +66,48 @@ public class RunGame
     private void PrintWorkers()
     {
         var workerList = village.GetWorkers();
-        foreach (var worker in workerList)
+        if (workerList.Count == 0)
         {
-            Console.WriteLine($"Name: {worker.name}, Occupation: {worker.occupation}");
+            Console.WriteLine("There is no available worker.");
+        }
+        else
+        {
+            foreach (var worker in workerList)
+            {
+                Console.WriteLine($"Name: {worker.name}, Occupation: {worker.occupation}");
+            }
         }
     }
 
     private void CheckUnfinishedBuildings()
     {
         var unfinishedBuildings = village.GetUnfinishedBuildings();
-        foreach (var building in unfinishedBuildings)
+        if (unfinishedBuildings.Count == 0)
         {
-            Console.WriteLine(building.name);
+            Console.WriteLine("There is no ongoing building.");
+        }
+        else
+        {
+            foreach (var building in unfinishedBuildings)
+            {
+                Console.WriteLine(building.name);
+            }  
         }
     }
 
     private void CheckFinishedBuildings()
     {
         var buildings = village.GetBuildings();
-        foreach (var building in buildings)
+        if (buildings.Count == 0)
         {
-            Console.WriteLine(building.name);
+            Console.WriteLine("There is no finished building.");
+        }
+        else
+        {
+            foreach (var building in buildings)
+            {
+                Console.WriteLine(building.name);
+            }
         }
     }
 
@@ -99,7 +120,7 @@ public class RunGame
     }
 
     private void Bury()
-    {
+    { 
         village.BuryDead();
     }
 

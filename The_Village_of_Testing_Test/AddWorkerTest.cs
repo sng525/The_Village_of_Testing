@@ -4,7 +4,6 @@ namespace The_Village_of_Testing_Test;
 
 public class AddWorkerTest
 {
-    // TODO 1 Tar en delegate/functional interface för vilken funktion som man kör efteråt.
     [Fact]
     public void AddOneWorker_TheNumberOfWorkersShouldBeOne()
     {

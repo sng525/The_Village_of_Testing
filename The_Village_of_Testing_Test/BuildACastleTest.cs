@@ -14,8 +14,7 @@ public class BuildACastleTEst
         village.SetFood(100);
         var castle = new Building("castle", 50, 50, 50);
         village.AddProject(castle);
-
-        //village.AddWorker(new Worker("David", "builder"));
+        
         village.AddWorker(new Worker("Jessi", "builder"));
 
         // When

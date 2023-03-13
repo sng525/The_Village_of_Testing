@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "47VEgdFh2Unlgn6b0sAD6DQx4lv64QhcfNGa8wdVOV45ycQz2yvgpFpyF+8G5/XW9gkD7FsEa/m9K8rNlxHiDg==",
+  "dgSpecHash": "eMyA3g2WZVW3GLdKbEDjowXSJ3u2UMK7E5Wk+DKpuHPBw8yTQkcolHzMUD79xgjhjIYxORBnotMgeK7ftIRErA==",
   "success": true,
   "projectFilePath": "/Users/juliasong/Documents/OPA/Part 5 - OOP Advanced/Inlämningsuppgift/Uppgift1/The Village of Testing/The Village of Testing/The Village of Testing.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/juliasong/.nuget/packages/castle.core/5.1.1/castle.core.5.1.1.nupkg.sha512",
+    "/Users/juliasong/.nuget/packages/moq/4.18.4/moq.4.18.4.nupkg.sha512",
+    "/Users/juliasong/.nuget/packages/system.diagnostics.eventlog/6.0.0/system.diagnostics.eventlog.6.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -1,4 +1,7 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=6f7071ac_002Dd351_002D4c52_002D851b_002D550f9c7c639d/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="BuildACastleTest" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=6f7071ac_002Dd351_002D4c52_002D851b_002D550f9c7c639d/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="BuildACastleTest" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;Project Location="/Users/juliasong/Documents/OPA/Part 5 - OOP Advanced/Inlämningsuppgift/Uppgift1/The Village of Testing/The_Village_of_Testing_Test" Presentation="&amp;lt;The_Village_of_Testing_Test&amp;gt;" /&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=dd7f7e38_002D8c6e_002D4f76_002D9c3e_002Dbf2c81c2f4b5/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="AddRandomWorkerTest" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;Project Location="/Users/juliasong/Documents/OPA/Part 5 - OOP Advanced/Inlämningsuppgift/Uppgift1/The Village of Testing/The_Village_of_Testing_Test" Presentation="&amp;lt;The_Village_of_Testing_Test&amp;gt;" /&gt;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

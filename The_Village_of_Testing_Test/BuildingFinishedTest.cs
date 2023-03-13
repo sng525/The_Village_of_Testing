@@ -108,7 +108,6 @@ public class BuildingFinishedTest
         // Given
         var village = new Village();
         village.SetWood(100);
-        // var daniel = new Worker("Daniel", "builder");
         var bob = new Worker("Bob", "builder");
         var house = new Building("house", 3, 5, 0);
 
